@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_CauHoiThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CauHoiThi.Designer.cs">
+      <DependentUpon>Form_CauHoiThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_CauHoiThi.resx">
+      <DependentUpon>Form_CauHoiThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ThongTin.resx">
       <DependentUpon>Form_ThongTin.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,3 +8,6 @@ C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debu
 C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.pdb
 C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.ỨngDụngTrắcNghiệm.resources
 C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.Form_ThongTin.resources
+C:\Users\ngoc.pham\Downloads\Xaydungungdungtracnghiem-master\DoAn_XDUDTN\DoAn_XDUDTN\bin\Debug\DoAn_XDUDTN.exe.config
+C:\Users\ngoc.pham\Downloads\Xaydungungdungtracnghiem-master\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.exe
+C:\Users\ngoc.pham\Downloads\Xaydungungdungtracnghiem-master\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.pdb
