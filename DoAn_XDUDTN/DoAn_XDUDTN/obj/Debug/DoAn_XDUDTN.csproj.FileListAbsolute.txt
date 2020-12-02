@@ -1,1 +1,10 @@
 C:\Users\admin\Desktop\DoAn_XDUDTN\DoAn_XDUDTN\bin\Debug\DoAn_XDUDTN.exe.config
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\bin\Debug\DoAn_XDUDTN.exe.config
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\bin\Debug\DoAn_XDUDTN.exe
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\bin\Debug\DoAn_XDUDTN.pdb
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.Properties.Resources.resources
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.exe
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.pdb
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.ỨngDụngTrắcNghiệm.resources
+C:\Users\admin\Desktop\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.Form_ThongTin.resources

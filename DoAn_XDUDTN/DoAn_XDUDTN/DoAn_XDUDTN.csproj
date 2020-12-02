@@ -44,14 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_ThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_ThongTin.Designer.cs">
+      <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ỨngDụngTrắcNghiệm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ỨngDụngTrắcNghiệm.Designer.cs">
+      <DependentUpon>ỨngDụngTrắcNghiệm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_ThongTin.resx">
+      <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ỨngDụngTrắcNghiệm.resx">
+      <DependentUpon>ỨngDụngTrắcNghiệm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
