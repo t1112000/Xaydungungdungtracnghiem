@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +57,17 @@
     <Compile Include="Form_ThongTin.Designer.cs">
       <DependentUpon>Form_ThongTin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCauHoi.Designer.cs">
+      <DependentUpon>frmCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Data\dbquanlythitracnghiem.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbquanlythitracnghiem.dbml</DependentUpon>
+    </Compile>
     <Compile Include="ỨngDụngTrắcNghiệm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ThongTin.resx">
       <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCauHoi.resx">
+      <DependentUpon>frmCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ỨngDụngTrắcNghiệm.resx">
       <DependentUpon>ỨngDụngTrắcNghiệm.cs</DependentUpon>
@@ -91,9 +106,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_Data\dbquanlythitracnghiem.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbquanlythitracnghiem.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Data\dbquanlythitracnghiem.dbml.layout">
+      <DependentUpon>dbquanlythitracnghiem.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
