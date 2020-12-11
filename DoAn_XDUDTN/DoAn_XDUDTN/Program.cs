@@ -16,7 +16,7 @@ namespace DoAn_XDUDTN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCauHoi());
+            Application.Run(new frnDeThi());
         }
     }
 }

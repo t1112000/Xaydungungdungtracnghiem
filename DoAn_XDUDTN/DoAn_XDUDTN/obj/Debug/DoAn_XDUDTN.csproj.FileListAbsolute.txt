@@ -24,3 +24,4 @@ D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.cs
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.exe
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.pdb
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.frmCauHoi.resources
+D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.frnDeThi.resources

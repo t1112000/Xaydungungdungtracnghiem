@@ -63,6 +63,12 @@
     <Compile Include="frmCauHoi.Designer.cs">
       <DependentUpon>frmCauHoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frnDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frnDeThi.Designer.cs">
+      <DependentUpon>frnDeThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Data\dbquanlythitracnghiem.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCauHoi.resx">
       <DependentUpon>frmCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frnDeThi.resx">
+      <DependentUpon>frnDeThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ỨngDụngTrắcNghiệm.resx">
       <DependentUpon>ỨngDụngTrắcNghiệm.cs</DependentUpon>
