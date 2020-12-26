@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DoAn_XDUDTN
 {
-    public partial class ỨngDụngTrắcNghiệm : Form
+    public partial class frmDangNhap : Form
     {
-        public ỨngDụngTrắcNghiệm()
+        public frmDangNhap()
         {
             InitializeComponent();
         }
 
-        private void ỨngDụngTrắcNghiệm_Load(object sender, EventArgs e)
+        private void frmDangNhap_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = Image.FromFile("C:/Users/admin/Desktop/background-powerpoint-dep-cho-bai-thuyet-trinh-chuyen-nghiep-01.png");
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;

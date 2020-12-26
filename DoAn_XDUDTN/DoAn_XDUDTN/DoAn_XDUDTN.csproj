@@ -35,6 +35,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,22 +64,29 @@
     <Compile Include="frmCauHoi.Designer.cs">
       <DependentUpon>frmCauHoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frnDeThi.cs">
+    <Compile Include="frmDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frnDeThi.Designer.cs">
-      <DependentUpon>frnDeThi.cs</DependentUpon>
+    <Compile Include="frmDe.Designer.cs">
+      <DependentUpon>frmDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeThi.Designer.cs">
+      <DependentUpon>frmDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Data\CauTL.cs" />
     <Compile Include="_Data\dbquanlythitracnghiem.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbquanlythitracnghiem.dbml</DependentUpon>
     </Compile>
-    <Compile Include="ỨngDụngTrắcNghiệm.cs">
+    <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ỨngDụngTrắcNghiệm.Designer.cs">
-      <DependentUpon>ỨngDụngTrắcNghiệm.cs</DependentUpon>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,11 +99,14 @@
     <EmbeddedResource Include="frmCauHoi.resx">
       <DependentUpon>frmCauHoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frnDeThi.resx">
-      <DependentUpon>frnDeThi.cs</DependentUpon>
+    <EmbeddedResource Include="frmDe.resx">
+      <DependentUpon>frmDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ỨngDụngTrắcNghiệm.resx">
-      <DependentUpon>ỨngDụngTrắcNghiệm.cs</DependentUpon>
+    <EmbeddedResource Include="frmDeThi.resx">
+      <DependentUpon>frmDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace DoAn_XDUDTN
 {
-    partial class ỨngDụngTrắcNghiệm
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -137,7 +137,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "ỨngDụngTrắcNghiệm";
             this.Text = "Ứng Dụng Trắc Nghiệm";
-            this.Load += new System.EventHandler(this.ỨngDụngTrắcNghiệm_Load);
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

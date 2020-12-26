@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAn_XDUDTN
@@ -16,7 +13,7 @@ namespace DoAn_XDUDTN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frnDeThi());
+            Application.Run(new frmDe());
         }
     }
 }
