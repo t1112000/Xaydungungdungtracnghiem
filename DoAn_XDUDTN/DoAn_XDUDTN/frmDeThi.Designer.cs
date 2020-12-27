@@ -161,28 +161,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btn_Luu);
             this.panel1.Controls.Add(this.btn_TaoMoi);
-            this.panel1.Location = new System.Drawing.Point(1022, 611);
+            this.panel1.Location = new System.Drawing.Point(1021, 611);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 35);
+            this.panel1.Size = new System.Drawing.Size(219, 35);
             this.panel1.TabIndex = 8;
             // 
             // btn_Luu
             // 
             this.btn_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_Luu.Location = new System.Drawing.Point(6, 3);
+            this.btn_Luu.Location = new System.Drawing.Point(7, 3);
             this.btn_Luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(100, 28);
             this.btn_Luu.TabIndex = 7;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // btn_TaoMoi
             // 
             this.btn_TaoMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TaoMoi.Location = new System.Drawing.Point(114, 3);
+            this.btn_TaoMoi.Location = new System.Drawing.Point(115, 3);
             this.btn_TaoMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TaoMoi.Name = "btn_TaoMoi";
             this.btn_TaoMoi.Size = new System.Drawing.Size(100, 28);

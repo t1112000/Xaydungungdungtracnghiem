@@ -9,6 +9,7 @@ namespace DoAn_XDUDTN
 {
     public partial class frmDe : Form
     {
+        public int locationY = 0;
         public frmDe()
         {
             InitializeComponent();
@@ -16,10 +17,6 @@ namespace DoAn_XDUDTN
 
         private void frmDe_Load(object sender, EventArgs e)
         {
-            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
-            {
-                LoadDe(db.CauHois.Take(5).ToList());
-            }
         }
 
         public void LoadDe(List<CauHoi> lstCauHoi)
@@ -39,8 +36,8 @@ namespace DoAn_XDUDTN
                 {
                     RadioButton radioButton = new RadioButton();
                     radioButton.Text = lstDapAnDung[j];
-                    radioButton.Location = new Point(30, label.Location.Y + (radioButton.Size.Height * j));
                     radioButton.AutoSize = true;
+                    radioButton.Location = new Point(30, label.Location.Y + label.Size.Height + (radioButton.Size.Height * j));
                     panel.Controls.Add(radioButton);
                 }
 
@@ -50,15 +47,22 @@ namespace DoAn_XDUDTN
                 {
                     RadioButton radioButton = new RadioButton();
                     radioButton.Text = lstDapAnSai[j];
-                    radioButton.Location = new Point(30, label.Location.Y + (radioButton.Size.Height * j));
-                    radioButton.Size = new Size(60, label.Location.Y + (radioButton.Size.Height * j));
+                    radioButton.AutoSize = true;
+                    radioButton.Location = new Point(30, radioButton.Size.Height + label.Location.Y + label.Size.Height + (radioButton.Size.Height * j));
                     panel.Controls.Add(radioButton);
                 }
 
-                panel.Location = new Point(10, 80 * i);
-                panel.Size = new Size(this.Size.Width, 80);
+                panel.Location = new Point(10, locationY);
+                panel.AutoSize = true;
+                locationY += panel.Size.Height + 10;
                 this.Controls.Add(panel);
             }
+        }
+
+        public void ResetForm()
+        {
+            this.Controls.Clear();
+            locationY = 0;
         }
 
         public List<string> lstDapAn(string value)

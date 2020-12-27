@@ -8,12 +8,14 @@ namespace DoAn_XDUDTN
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static frmDeThi frmdethi;
         [STAThread]
         static void Main()
         {
+            frmdethi = new frmDeThi();
             Application.EnableVisualStyles();
+            Application.Run(frmdethi);
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDe());
         }
     }
 }

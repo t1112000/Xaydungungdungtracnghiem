@@ -76,6 +76,12 @@
     <Compile Include="frmDeThi.Designer.cs">
       <DependentUpon>frmDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListCauHoi.Designer.cs">
+      <DependentUpon>frmListCauHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Data\CauTL.cs" />
     <Compile Include="_Data\dbquanlythitracnghiem.designer.cs">
       <AutoGen>True</AutoGen>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListCauHoi.resx">
+      <DependentUpon>frmListCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

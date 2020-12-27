@@ -1,12 +1,9 @@
 ﻿using DoAn_XDUDTN._Data;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAn_XDUDTN
@@ -15,6 +12,7 @@ namespace DoAn_XDUDTN
     {
         private List<CauHoi> lstCauhoi;
         private List<int> lstIndexCauHoi;
+        private frmDe frmDe;
         public frmDeThi()
         {
             InitializeComponent();
@@ -46,25 +44,45 @@ namespace DoAn_XDUDTN
 
             if (check)
             {
-                Random_CauHoi(ref lstCauhoi, ref lstIndexCauHoi);
+                if (lstCauhoi != null && lstCauhoi.Count > 0)
+                    lstCauhoi.Clear();
 
-                frmDe frmDe = new frmDe();
-                frmDe.TopLevel = false;
-                frmDe.AutoScroll = true;
-                frmDe.Location = new Point(10, gBox_DeThi.Location.Y);
-                frmDe.Size = new Size(gBox_DeThi.Size.Width - 20, gBox_DeThi.Size.Height - 10);
-                frmDe.LoadDe(lstCauhoi);
-                this.gBox_DeThi.Controls.Add(frmDe);
-                frmDe.Show();
+                if (lstIndexCauHoi != null && lstIndexCauHoi.Count > 0)
+                    lstIndexCauHoi.Clear();
+
+                for(int i = 0; i < int.Parse(txt_SoCauHoi.Text); i++)
+                {
+                    Random_CauHoi(ref lstCauhoi, ref lstIndexCauHoi);
+                }
+
+                LoadCauHoi();
+            }
+            else
+            {
+                MessageBox.Show("Số câu hỏi không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btn_Doi_Click(object sender, EventArgs e)
         {
-            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
-            {
-                MessageBox.Show(db.CauHois.Skip(4).Take(1).First().Noidung, "cau hoi");
-            }
+            frmListCauHoi lstCH = new frmListCauHoi();
+            lstCH.load(lstIndexCauHoi, int.Parse(cbo_MonHoc.SelectedValue.ToString()));
+            lstCH.ShowDialog();
+        }
+
+        public void LoadCauHoi()
+        {
+            if (frmDe == null)
+                frmDe = new frmDe();
+
+            frmDe.ResetForm();
+            frmDe.TopLevel = false;
+            frmDe.AutoScroll = true;
+            frmDe.Location = new Point(10, gBox_DeThi.Location.Y);
+            frmDe.Size = new Size(gBox_DeThi.Size.Width - 30, gBox_DeThi.Size.Height - 50);
+            frmDe.LoadDe(lstCauhoi);
+            this.gBox_DeThi.Controls.Add(frmDe);
+            frmDe.Show();
         }
 
         private void Random_CauHoi(ref List<CauHoi> lstCH, ref List<int> lstIndex)
@@ -73,16 +91,16 @@ namespace DoAn_XDUDTN
             
             using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
             {
-                int index = rd.Next(0, db.CauHois.Count() - 1);
-                while(lstIndex != null && lstIndex.IndexOf(index) == -1)
+                int index = rd.Next(1, db.CauHois.Count());
+                while(lstIndex != null && lstIndex.IndexOf(index) != -1)
                 {
-                    index = rd.Next(0, db.CauHois.Count() - 1);
+                    index = rd.Next(1, db.CauHois.Count());
                 }
 
                 if (lstCH == null)
                     lstCH = new List<CauHoi>();
-
-                lstCH.Add(db.CauHois.Skip(index - 1).Take(1).First());
+                
+                lstCH.Add(db.CauHois.Where(x => x.Monhoc.ToString().Equals(cbo_MonHoc.SelectedValue.ToString())).Skip(index - 1).Take(1).First());
 
                 if (lstIndex == null)
                     lstIndex = new List<int>();
@@ -115,6 +133,12 @@ namespace DoAn_XDUDTN
 
         private bool KTSoCauHoi(int number)
         {
+            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
+            {
+                if (number > db.CauHois.Count())
+                    return false;
+            }
+
             double value = number;
             string heso = ((double)10 / value).ToString("0,0.##########");
 
@@ -138,5 +162,32 @@ namespace DoAn_XDUDTN
             return false;
         }
 
+        public void DoiCauHoi(List<int> lstcauhoidoi)
+        {
+            Random rd = new Random();
+            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
+            {
+                foreach (int i in lstcauhoidoi)
+                {
+                    int index = rd.Next(1, db.CauHois.Count());
+
+                    while(lstcauhoidoi.IndexOf(index) != -1)
+                    {
+                        index = rd.Next(1, db.CauHois.Count());
+                    }
+
+                    lstCauhoi[i] = db.CauHois.Where(x => x.Monhoc.ToString().Equals(cbo_MonHoc.SelectedValue.ToString())).Skip(index - 1).Take(1).First();
+                    lstIndexCauHoi[i] = index;
+                }
+            }
+        }
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
+            {
+
+            }
+        }
     }
 }
