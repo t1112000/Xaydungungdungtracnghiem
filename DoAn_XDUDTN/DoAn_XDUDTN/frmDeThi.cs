@@ -186,7 +186,27 @@ namespace DoAn_XDUDTN
         {
             using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
             {
+                DeThi deThi = new DeThi();
+                deThi.Monhoc = int.Parse(cbo_MonHoc.SelectedValue.ToString());
 
+                db.DeThis.InsertOnSubmit(deThi);
+
+                db.SubmitChanges();
+
+                int iddethi = db.DeThis.OrderByDescending(x => x.IDdt).First().IDdt;
+
+                foreach(CauHoi i in lstCauhoi)
+                {
+                    DethiVaCauhoi dtvaCH = new DethiVaCauhoi();
+                    dtvaCH.Dethi = iddethi;
+                    dtvaCH.Cauhoi = i.IDch;
+
+                    db.DethiVaCauhois.InsertOnSubmit(dtvaCH);
+                }
+
+                db.SubmitChanges();
+
+                LoadDeThi(cbo_MonHoc.SelectedValue.ToString());
             }
         }
     }
