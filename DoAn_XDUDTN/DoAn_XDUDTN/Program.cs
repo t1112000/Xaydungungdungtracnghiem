@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_XDUDTN.folderPhongThi;
+using System;
 using System.Windows.Forms;
 
 namespace DoAn_XDUDTN
@@ -12,10 +13,10 @@ namespace DoAn_XDUDTN
         [STAThread]
         static void Main()
         {
-            frmdethi = new frmDeThi();
             Application.EnableVisualStyles();
-            Application.Run(frmdethi);
             Application.SetCompatibleTextRenderingDefault(false);
+            frmdethi = new frmDeThi();
+            Application.Run(new frmThemDeThi());
         }
     }
 }

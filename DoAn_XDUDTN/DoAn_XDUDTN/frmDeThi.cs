@@ -40,6 +40,21 @@ namespace DoAn_XDUDTN
 
         private void btn_TaoMoi_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_SoCauHoi.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập số câu hỏi", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
+            {
+                if (db.CauHois.Count(x => x.Monhoc.ToString() == cbo_MonHoc.SelectedValue.ToString()) < int.Parse(txt_SoCauHoi.Text))
+                {
+                    MessageBox.Show("Câu hỏi quá nhiều", "Wainning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             var check = KTSoCauHoi(int.Parse(txt_SoCauHoi.Text));
 
             if (check)
@@ -107,6 +122,44 @@ namespace DoAn_XDUDTN
 
                 lstIndex.Add(index);
             }
+        }
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
+            {
+                DeThi deThi = new DeThi();
+                deThi.Monhoc = int.Parse(cbo_MonHoc.SelectedValue.ToString());
+
+                db.DeThis.InsertOnSubmit(deThi);
+
+                db.SubmitChanges();
+
+                int iddethi = db.DeThis.OrderByDescending(x => x.IDdt).First().IDdt;
+
+                foreach(CauHoi i in lstCauhoi)
+                {
+                    DethiVaCauhoi dtvaCH = new DethiVaCauhoi();
+                    dtvaCH.Dethi = iddethi;
+                    dtvaCH.Cauhoi = i.IDch;
+
+                    db.DethiVaCauhois.InsertOnSubmit(dtvaCH);
+                }
+
+                db.SubmitChanges();
+
+                LoadDeThi(cbo_MonHoc.SelectedValue.ToString());
+            }
+        }
+
+        private void gview_DsDe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
+            {
+                var query = db.DethiVaCauhois.Where(x => x.Dethi.ToString() == gview_DsDe.CurrentRow.Cells[0].Value.ToString()).ToList();
+                var cauhois = query.Select(x => db.CauHois.FirstOrDefault(i => i.IDch == x.Cauhoi)).ToList();
+                lstCauhoi = cauhois;
+                LoadCauHoi();    
+            }    
         }
         private void LoadMonHoc()
         {
@@ -182,32 +235,12 @@ namespace DoAn_XDUDTN
             }
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void frmDeThi_FormClosed(object sender, FormClosedEventArgs e)
         {
-            using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
-            {
-                DeThi deThi = new DeThi();
-                deThi.Monhoc = int.Parse(cbo_MonHoc.SelectedValue.ToString());
+            if (frmDe != null)
+                frmDe.Close();
 
-                db.DeThis.InsertOnSubmit(deThi);
-
-                db.SubmitChanges();
-
-                int iddethi = db.DeThis.OrderByDescending(x => x.IDdt).First().IDdt;
-
-                foreach(CauHoi i in lstCauhoi)
-                {
-                    DethiVaCauhoi dtvaCH = new DethiVaCauhoi();
-                    dtvaCH.Dethi = iddethi;
-                    dtvaCH.Cauhoi = i.IDch;
-
-                    db.DethiVaCauhois.InsertOnSubmit(dtvaCH);
-                }
-
-                db.SubmitChanges();
-
-                LoadDeThi(cbo_MonHoc.SelectedValue.ToString());
-            }
+            Application.ExitThread();
         }
     }
 }

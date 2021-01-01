@@ -147,7 +147,7 @@
             // txt_SoCauHoi
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txt_SoCauHoi, 2);
-            this.txt_SoCauHoi.Location = new System.Drawing.Point(929, 4);
+            this.txt_SoCauHoi.Location = new System.Drawing.Point(928, 4);
             this.txt_SoCauHoi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoCauHoi.Name = "txt_SoCauHoi";
             this.txt_SoCauHoi.Size = new System.Drawing.Size(308, 22);
@@ -161,17 +161,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btn_Luu);
             this.panel1.Controls.Add(this.btn_TaoMoi);
-            this.panel1.Location = new System.Drawing.Point(1021, 611);
+            this.panel1.Location = new System.Drawing.Point(1020, 611);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 35);
+            this.panel1.Size = new System.Drawing.Size(220, 35);
             this.panel1.TabIndex = 8;
             // 
             // btn_Luu
             // 
             this.btn_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_Luu.Location = new System.Drawing.Point(7, 3);
+            this.btn_Luu.Location = new System.Drawing.Point(8, 3);
             this.btn_Luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(100, 28);
@@ -183,7 +183,7 @@
             // btn_TaoMoi
             // 
             this.btn_TaoMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TaoMoi.Location = new System.Drawing.Point(115, 3);
+            this.btn_TaoMoi.Location = new System.Drawing.Point(116, 3);
             this.btn_TaoMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TaoMoi.Name = "btn_TaoMoi";
             this.btn_TaoMoi.Size = new System.Drawing.Size(100, 28);
@@ -199,12 +199,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
             this.groupBox1.Controls.Add(this.gview_DsDe);
-            this.groupBox1.Location = new System.Drawing.Point(929, 45);
+            this.groupBox1.Location = new System.Drawing.Point(928, 45);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.SetRowSpan(this.groupBox1, 2);
-            this.groupBox1.Size = new System.Drawing.Size(311, 558);
+            this.groupBox1.Size = new System.Drawing.Size(312, 558);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Đề Thi";
@@ -219,8 +219,9 @@
             this.gview_DsDe.Margin = new System.Windows.Forms.Padding(4);
             this.gview_DsDe.Name = "gview_DsDe";
             this.gview_DsDe.RowHeadersWidth = 51;
-            this.gview_DsDe.Size = new System.Drawing.Size(295, 527);
+            this.gview_DsDe.Size = new System.Drawing.Size(296, 527);
             this.gview_DsDe.TabIndex = 0;
+            this.gview_DsDe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gview_DsDe_CellClick);
             // 
             // gBox_DeThi
             // 
@@ -233,7 +234,7 @@
             this.gBox_DeThi.Name = "gBox_DeThi";
             this.gBox_DeThi.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.SetRowSpan(this.gBox_DeThi, 2);
-            this.gBox_DeThi.Size = new System.Drawing.Size(917, 558);
+            this.gBox_DeThi.Size = new System.Drawing.Size(916, 558);
             this.gBox_DeThi.TabIndex = 10;
             this.gBox_DeThi.TabStop = false;
             this.gBox_DeThi.Text = "Đề Thi";
@@ -247,6 +248,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDeThi";
             this.Text = "frnDeThi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDeThi_FormClosed);
             this.Load += new System.EventHandler(this.frmDeThi_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
