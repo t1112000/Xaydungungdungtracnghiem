@@ -172,7 +172,7 @@ namespace DoAn_XDUDTN.folderPhongThi
             {
                 DanhSachPhongThi ds = new DanhSachPhongThi();
                 string sinhvien = db.SinhViens.FirstOrDefault(x => x.IDsv.ToString() == gview_lsthocsinh.CurrentRow.Cells[0].Value.ToString()).IDdn;
-                var ts = db.DanhSachPhongThis.FirstOrDefault(x => x.Thisinh == sinhvien);
+                var ts = db.DanhSachPhongThis.FirstOrDefault(x => x.Thisinh == sinhvien && x.Phongthi.ToString() == cbo_CTKythi.SelectedValue.ToString());
 
                 if (ts != null)
                 {

@@ -125,6 +125,12 @@ namespace DoAn_XDUDTN
         }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
+            if (lstCauhoi == null || lstCauhoi.Count < 1)
+            {
+                MessageBox.Show("Không có câu hỏi để lưu", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }   
+            
             using (dbquanlythitracnghiemDataContext db = new dbquanlythitracnghiemDataContext())
             {
                 DeThi deThi = new DeThi();

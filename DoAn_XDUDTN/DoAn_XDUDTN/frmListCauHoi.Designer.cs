@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.gbox_lstCH = new System.Windows.Forms.GroupBox();
+            this.panelCH = new System.Windows.Forms.Panel();
             this.btn_OK = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.panelCH = new System.Windows.Forms.Panel();
             this.gbox_lstCH.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,13 @@
             this.gbox_lstCH.TabIndex = 0;
             this.gbox_lstCH.TabStop = false;
             this.gbox_lstCH.Text = "Câu hỏi";
+            // 
+            // panelCH
+            // 
+            this.panelCH.Location = new System.Drawing.Point(12, 21);
+            this.panelCH.Name = "panelCH";
+            this.panelCH.Size = new System.Drawing.Size(213, 293);
+            this.panelCH.TabIndex = 0;
             // 
             // btn_OK
             // 
@@ -70,13 +77,6 @@
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // panelCH
-            // 
-            this.panelCH.Location = new System.Drawing.Point(12, 21);
-            this.panelCH.Name = "panelCH";
-            this.panelCH.Size = new System.Drawing.Size(213, 293);
-            this.panelCH.TabIndex = 0;
-            // 
             // frmListCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -85,6 +85,7 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.gbox_lstCH);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListCauHoi";
             this.Text = "frmListCauHoi";
             this.Load += new System.EventHandler(this.frmListCauHoi_Load);

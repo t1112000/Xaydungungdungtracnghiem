@@ -26,6 +26,7 @@ D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.fr
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.frmDangNhap.resources
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.frmDe.resources
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.frmListCauHoi.resources
-D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.csprojAssemblyReference.cache
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.folderPhongThi.frmPhongThi.resources
 D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.folderPhongThi.frmThemDeThi.resources
+D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.frmMenu.resources
+D:\Git\Xaydungungdungtracnghiem\DoAn_XDUDTN\DoAn_XDUDTN\obj\Debug\DoAn_XDUDTN.csprojAssemblyReference.cache

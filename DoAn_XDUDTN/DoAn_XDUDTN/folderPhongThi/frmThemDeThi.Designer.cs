@@ -153,6 +153,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbo_Phongthi);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThemDeThi";
             this.Text = "frmThemDeThi";
             this.Load += new System.EventHandler(this.frmThemDeThi_Load);

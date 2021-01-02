@@ -26,18 +26,17 @@ namespace DoAn_XDUDTN
             try
             {
                 GetCauHoi(cboMonHoc.SelectedValue.ToString());
+                txt_ID.Clear();
+                txt_CauHoi.Clear();
+                txt_TLDung.Clear();
+                txt_TLSai.Clear();
+                CauTLD = null;
+                CauTLS = null;
             }
             catch(Exception ex)
             {
 
             }
-
-            txt_ID.Clear();
-            txt_CauHoi.Clear();
-            txt_TLDung.Clear();
-            txt_TLSai.Clear();
-            CauTLD.Clear();
-            CauTLS.Clear();
         }
 
         private void gviewDSCauHoi_CellClick(object sender, DataGridViewCellEventArgs e)

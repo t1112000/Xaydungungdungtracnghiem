@@ -44,6 +44,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gview_lst_thisinh = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_auto = new System.Windows.Forms.TextBox();
             this.btn_auto = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,7 +62,6 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.txt_phongthi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_auto = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gview_lsthocsinh)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -238,6 +238,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi thiết phòng thi";
             // 
+            // txt_auto
+            // 
+            this.txt_auto.Location = new System.Drawing.Point(523, 66);
+            this.txt_auto.Name = "txt_auto";
+            this.txt_auto.Size = new System.Drawing.Size(100, 22);
+            this.txt_auto.TabIndex = 21;
+            this.txt_auto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_auto_KeyPress);
+            // 
             // btn_auto
             // 
             this.btn_auto.Location = new System.Drawing.Point(434, 60);
@@ -408,14 +416,6 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Phòng thi";
             // 
-            // txt_auto
-            // 
-            this.txt_auto.Location = new System.Drawing.Point(523, 66);
-            this.txt_auto.Name = "txt_auto";
-            this.txt_auto.Size = new System.Drawing.Size(100, 22);
-            this.txt_auto.TabIndex = 21;
-            this.txt_auto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_auto_KeyPress);
-            // 
             // frmPhongThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -439,6 +439,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbo_Monhoc);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhongThi";
             this.Text = "folderPhongThi";
             this.Load += new System.EventHandler(this.frmPhongThi_Load);
